@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 1rem;
+  background-color: black;
+  color: whitesmoke;
+  justify-items: center;
+  justify-self: center;
+  max-width: 95vw;
+  font-size: larger;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  background-color: rgb(44, 44, 44);
+  padding: 20px 5px 20px 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 5rem;
+  background: linear-gradient(to bottom, whitesmoke, rgb(12, 12, 12));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-left: 2rem;
+}
+
+h2 {
+  font-family: "Roboto-Flex", sans-serif;
+  font-weight: 1.5rem;
+}
+
+.metal-mania-regular {
+  font-family: "Metal Mania", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+main {
+  display: flex;
+  /* woah... i know.. */
+}
+
+li {
+  list-style-type: none;
+  padding: 6px 5px 5px 5px;
+  border-bottom: 1px solid whitesmoke;
+  margin-bottom: 0.5rem;
+}
+
+li:last-of-type {
+  border: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.allEpisodes h2:hover {
+  cursor: pointer;
+}
+
+.allEpisodes h2 {
+  margin-bottom: 1.5rem;
+}
+
+li:hover {
+  background-color: gray;
+  cursor: pointer;
+  border-radius: 7px;
+  border-bottom: 1px solid gray;
+}
+
+.details {
+  max-width: 500px;
+  margin-left: 1rem;
+  background-color: rgb(85, 85, 85);
+  height: fit-content;
+  padding: 1rem 1rem 0 1rem;
+  border-radius: 20px;
+}
+
+.details p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-align: center;
+  margin: 1rem -1rem 0 -1rem;
+  padding: 0.1rem 0;
+  display: block;
+  width: 106%;
+  min-width: 306px;
+  background-color: whitesmoke;
+  color: black;
+  text-decoration: none;
+  border-radius: 0px 0px 20px 20px;
+  font-size: larger;
+  justify-self: center;
+}
+
+a:hover {
+  background-color: rgb(185, 185, 185);
+}
+
+:hover {
+  transition: all 0.25s ease-in-out;
+}
