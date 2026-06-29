@@ -3,18 +3,19 @@ import { useState } from "react";
 
 export default function App() {
   /* Question:
-  set episode is only needed when we are intending to
-  change content within episode[]?
+  setEpisodes is only needed when we are intending to
+  change content within episodes[]?
   ie. it is static in this workshop, so technically
   not needed?
   */
-  const [episodes, setEpisodes] = useState(episodeList);
+  const [episodes /*, setEpisodes*/] = useState(episodeList);
   const [selectedEpisode, setSelectedEpisode] = useState(null);
 
   function EpisodeDetails() {
     if (!selectedEpisode) {
       return (
-        /* Question: this section tag is needed to enclose/wrap
+        /* Question:
+        this section tag is needed to enclose/wrap
       everything within one element? */
         <section className="details">
           <h2>Expand</h2>
@@ -25,12 +26,19 @@ export default function App() {
 
     return (
       <section className="details">
-        <h2>{selectedEpisode.titel}</h2>
+        <h2>{selectedEpisode.title}</h2>
         <p>
           Episode {selectedEpisode.id}: {selectedEpisode.title}.
           <br />
+          <br />
           Episode description: {selectedEpisode.description}.
         </p>
+        <a
+          href="https://www.disneyplus.com/browse/entity-5e474669-a4a2-4b90-a928-5ae7f845090c"
+          target="_new"
+        >
+          Start ▶
+        </a>
       </section>
     );
   }
@@ -38,7 +46,7 @@ export default function App() {
   function AllEpisodes() {
     return (
       <section className="allEpisodes">
-        <h2>All Episodes</h2>
+        <h2 onClick={() => setSelectedEpisode()}>All Episodes</h2>
         <ul className="actualEpisodes">
           {episodes.map((episode) => (
             <li key={episode.id} onClick={() => setSelectedEpisode(episode)}>
@@ -53,7 +61,7 @@ export default function App() {
   return (
     <>
       <header>
-        <h1>Dark Echoes</h1>
+        <h1 className="metal-mania-regular">Dark Echoes</h1>
       </header>
       <main>
         <AllEpisodes />
